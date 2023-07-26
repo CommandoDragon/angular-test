@@ -16,7 +16,8 @@ export class WinkelmandjeComponent {
   inUSD: boolean = false;
   factor: number = 1.108251;
 
-  currency: string = 'EUR'
+  currency: string = 'EUR';
+  btnText: string = 'USD';
 
   constructor(public _service: WinkelmandjeService)
   {
