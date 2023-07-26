@@ -1,0 +1,22 @@
+<div class="container-fluid">
+<h3>Winkelmandje</h3>
+<button (click)="convertCurrency()">USD</button>
+<div>
+    <table class="table">
+        <tr *ngFor="let lijn of winkelmandje">
+            <td>{{lijn.winkel.naam}}</td>
+            <td>{{lijn.groente.naam}}</td>
+            <td>{{lijn.groente.prijs | number : '1.2-2'}} {{currency}}</td>
+            <td>{{lijn.aantal}}  {{lijn.groente.stuk}}</td>
+            <td>{{(lijn.aantal * lijn.groente.prijs) | number : '1.2-2'}} {{currency}}</td>
+        </tr>
+        <tr *ngIf="winkelmandje.length != 0" style="background-color: darkseagreen;">
+            <td>Totaal</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{totaal | number : '1.2-2'}} {{currency}}</td>
+        </tr>
+    </table>
+</div>
+</div>
