@@ -104,21 +104,6 @@ export class AppComponent {
     console.log(stuk);
   }
 
-  async onSubmit()
-  {
-    /*await this._winkelmandjeservice.bestel(this.bestellijnModel)
-      .subscribe(
-        {
-          next:data=>console.log('Succes!', data),
-          error:error=>this.errorMsg = error.statusText
-        }
-      )
-
-      //this._winkelmandjeservice.getBestellijnen();
-      //this._winkelmandjeservice.getBestellijnen().subscribe({next:(data => this.winkelmandje = data)});*/
-
-  }
-
   updateWinkelmandje(): void
   {
     if(this.winkelmandje.length != 0)
