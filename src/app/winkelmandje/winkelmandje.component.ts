@@ -36,6 +36,7 @@ export class WinkelmandjeComponent {
 
       this.totaal*= this.factor;
       this.currency='USD';
+      this.btnText='EUR';
       this.inUSD = true;
     }
     else
@@ -47,6 +48,7 @@ export class WinkelmandjeComponent {
 
       this.totaal/= this.factor;
       this.currency='EUR';
+      this.btnText='USD';
       this.inUSD = false;
     }
     console.log(this.inUSD)
