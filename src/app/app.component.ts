@@ -19,7 +19,8 @@ export class AppComponent {
   winkelmandje: Bestellijn[] = [];
   winkelHasError = true;
   groenteHasError = true;
-  numberHasError = true;
+  numberHasError = false;
+  numberIsZero = true;
   errorMsg= '';
 
   constructor(private _winkelmandjeservice: WinkelmandjeService){}
@@ -82,6 +83,7 @@ export class AppComponent {
   {
     if(value > 0)
     {
+      this.numberIsZero = false;
       if(stuk != 'kg')
       {
         if((value % 1) == 0)
@@ -98,9 +100,9 @@ export class AppComponent {
       }
     }
     else {
-      this.numberHasError = true;
+      this.numberIsZero = true;
     }
-
+    
     console.log(stuk);
   }
 
