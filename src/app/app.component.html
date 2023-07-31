@@ -22,7 +22,7 @@
       <small class="text-danger" [class.d-none]="!numberHasError || aantal.untouched || bestellijnForm.value.groente == null || bestellijnForm.value.groente =='null'">Decimalen enkel bij kg aub!</small>
       <small class="text-danger" [class.d-none]="!numberIsZero || aantal.untouched">Gelieve een aantal groter dan 0 in te geven aub!</small>
     </div>
-      <button [disabled]="!bestellijnForm.form.valid || winkelHasError || groenteHasError || numberHasError" class="btn btn-primary" (click)="updateWinkelmandje()">Bestel</button>
+      <button [disabled]="!bestellijnForm.form.valid || winkelHasError || groenteHasError || numberHasError || numberIsZero" class="btn btn-primary" (click)="updateWinkelmandje()">Bestel</button>
 </form>
 </div>
 <app-winkelmandje [winkelmandje]="winkelmandje" [totaal]="totaal"></app-winkelmandje>

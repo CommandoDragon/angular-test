@@ -128,6 +128,10 @@ export class AppComponent {
       this.add();
     }
     this.totaal += (this.bestellijnModel.aantal * this.bestellijnModel.groente.prijs)
+    this.bestellijnModel = new Bestellijn(this.winkelmandje.length + 1, new Winkel('', '', 0, '', '', ''), new Groente('', 0, ''), 0);
+    this.winkelHasError = true;
+    this.groenteHasError = true;
+
   }
 
   add(): void {
