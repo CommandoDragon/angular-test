@@ -9,7 +9,6 @@
             <td>{{lijn.groente.prijs | number : '1.2-2'}} {{currency}}</td>
             <td>{{lijn.aantal}}  {{lijn.groente.stuk}}</td>
             <td>{{(lijn.aantal * lijn.groente.prijs) | number : '1.2-2'}} {{currency}}</td>
-            {{winkelmandje.length}}
         </tr>
         <tr *ngIf="winkelmandje.length != 0" style="background-color: darkseagreen;">
             <td>Totaal</td>
