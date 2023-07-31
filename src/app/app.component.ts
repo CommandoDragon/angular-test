@@ -21,6 +21,7 @@ export class AppComponent {
   groenteHasError = true;
   numberHasError = false;
   numberIsZero = true;
+  alInMandje = false;
   errorMsg= '';
 
   constructor(private _winkelmandjeservice: WinkelmandjeService){}
@@ -115,13 +116,15 @@ export class AppComponent {
         if(this.winkelmandje[i].winkel.naam == this.bestellijnModel.winkel.naam && this.winkelmandje[i].groente.naam == this.bestellijnModel.groente.naam)
         {
           this.winkelmandje[i].aantal += this.bestellijnModel.aantal;
+          this.alInMandje =true;
           i = this.winkelmandje.length;
         }
-        else
-        {
-          this.add();
-        }
       }
+      if(!this.alInMandje)
+      {
+        this.add();
+      }
+      this.alInMandje = false;
     }
     else 
     {
